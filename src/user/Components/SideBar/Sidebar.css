@@ -1,0 +1,104 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  width: 270px;
+  height: 100%;
+  background: hsl(218, 77%, 10%);
+  z-index: 200;
+  padding: 12px;
+  overflow: hidden;
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+}
+.nav-item,
+.logOut {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 12px;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+.nav-item.active {
+  background: var(--royal);
+  color: #ffff;
+}
+.nav-item:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffff;
+}
+.logOut {
+  background: var(--danger);
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+}
+.logo-dash {
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.brand-logo-dash {
+  padding-top: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+}
+@media (max-width: 1024px) {
+  /* Tablet styles here */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Adjusted for a standard mobile bottom nav height */
+    padding: 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border-top: 2px solid var(--border-color);
+  }
+
+  .brand-logo-dash {
+    display: none;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    margin-top: 0;
+    width: 100%;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    color: gray;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+  }
+  .nav-item svg {
+    font-size: 1.5rem;
+  }
+
+  .logOut {
+    margin-top: 0;
+    width: auto;
+  }
+}

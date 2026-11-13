@@ -1,0 +1,203 @@
+html,
+body {
+  height: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+input,
+select {
+  font-family: inherit;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Focus Visible Accessibility */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 2px;
+}
+
+
+
+.content-section {
+  margin-top: 15px;
+  margin-left: 270px;
+  padding: 1.5rem;
+}
+.main-wrapper {
+  background-color: var(--bg-soft);
+  border-top-left-radius: var(--radius-lg);
+  transition: margin-left var(--transition-normal);
+}
+
+/* ==========================================================================
+       6. DASHBOARD COMPONENTS (Hero, Filter, Grid)
+       ========================================================================== */
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(135deg, #06152f 0%, var(--navy-light) 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  bottom: -50px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, var(--royal) 0%, transparent 70%);
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 1;
+}
+
+.hero-tag {
+  display: inline-block;
+  background-color: rgba(0, 207, 255, 0.15);
+  color: var(--secondary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(0, 207, 255, 0.3);
+}
+
+.hero-title {
+  font-weight: 700;
+  /* line-height: 1.25; */
+  margin-bottom: 0.5rem;
+}
+
+.hero-desc {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-btn {
+  background-color: var(--royal);
+  color: #ffff;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.hero-btn:hover {
+  background-color: #0056d6;
+  transform: translateY(-2px);
+}
+
+/* Category Filter Pills */
+.filter-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.category-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  scrollbar-width: none; /* Firefox */
+}
+
+.category-pills::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.pill {
+  white-space: nowrap;
+  padding: 0.55rem 1.1rem;
+  border-radius: 30px;
+  background-color: var(--color-white);
+  color: var(--color-navy-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.pill:hover {
+  border-color: var(--color-royal);
+  color: var(--color-royal);
+}
+
+.pill.active {
+  background-color: var(--color-royal);
+  color: var(--color-white);
+  border-color: var(--color-royal);
+  box-shadow: 0 4px 10px rgba(8, 102, 255, 0.25);
+}
+
+.sort-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-navy-muted);
+}
+
+.sort-select {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+       9. RESPONSIVE BREAKPOINTS (360px, 768px, 820px, 1024px+)
+       ========================================================================== */
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+    body{
+            padding: 10px;
+    overflow: hidden;
+    }
+
+    .content-section{
+        margin:10px;
+    }
+
+}

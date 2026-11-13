@@ -1,0 +1,133 @@
+.header-dashboard {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding-left: 300px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 100;
+  transition: var(--transition);
+}
+.nav-container-set {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+}
+.header-dashboard-search {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.input-setting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-width: 300px;
+  max-width: 450px;
+  border: 2px solid var(--border-color);
+  padding: 10px;
+  flex: 1;
+  border-radius: 12px;
+}
+.input-setting:focus-within {
+  border-color: var(--royal);
+  background-color: rgba(255, 255, 255, 0.05); /* optional subtle tint */
+}
+.header-dashboard-input {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  border: none;
+  background: transparent;
+}
+.icon-search {
+  color: gray;
+}
+.header-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+}
+.header-search {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+.icon-badge-btn {
+  position: relative;
+}
+.logoDash{
+  display: none;
+}
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .header-dashboard {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+  }
+  .logoDash {
+    display: flex;
+    padding: 2px;
+    transition: all 0.3s ease-in-out;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .logoDash:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .input-setting {
+    gap: 5px;
+    min-width: 210px;
+    max-width: 350px;
+    /* border-radius: 50px; */
+  }
+  .header-actions {
+    width: 100%;
+    display: flex;
+    padding: 0 10px;
+    gap: 8px;
+  }
+  .user-profile {
+    display: none;
+  }
+  .nav-container-set {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .header-search {
+    display: flex;
+    gap: 8px;
+    margin-left: 15px;
+  }
+}
